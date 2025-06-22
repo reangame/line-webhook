@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>取得群組ID</title>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+  <h3>載入中...</h3>
+  <pre id="result"></pre>
+  <script>
+    async function main() {
+      await liff.init({ liffId: "2007620073-GBQvOBXR" }); // 替換為你的 LIFF ID
+      const context = liff.getContext();
+      document.getElementById("result").innerText = JSON.stringify(context, null, 2);
+    }
+    main();
+  </script>
+</body>
+</html>
